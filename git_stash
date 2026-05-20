@@ -1,0 +1,76 @@
+
+
+The basic Git stash command is:
+
+```bash id="g3b5pk"
+git stash
+```
+
+This temporarily saves your uncommitted changes and restores your working directory to the last commit.
+
+### Common stash commands
+
+* Save changes with a message:
+
+```bash id="8p36d6"
+git stash push -m "work in progress"
+```
+
+* View stashes:
+
+```bash id="b0j1vk"
+git stash list
+```
+
+* Apply the latest stash (keep it in stash list):
+
+```bash id="0f4u3w"
+git stash apply
+```
+
+* Apply and remove the latest stash:
+
+```bash id="8x8o9i"
+git stash pop
+```
+
+* Apply a specific stash:
+
+```bash id="2v9x8j"
+git stash apply stash@{1}
+```
+
+* Delete a specific stash:
+
+```bash id="rrdfm4"
+git stash drop stash@{0}
+```
+
+* Delete all stashes:
+
+```bash id="zv7j5z"
+git stash clear
+```
+
+* Stash including untracked files:
+
+```bash id="v9cnlz"
+git stash -u
+```
+
+* Stash only staged changes:
+
+```bash id="z64rc7"
+git stash --staged
+```
+
+### Typical workflow
+
+```bash id="9x4y3r"
+git status
+git stash
+git pull
+git stash pop
+```
+
+This is commonly used when you need to quickly switch branches or pull updates without committing unfinished work.
