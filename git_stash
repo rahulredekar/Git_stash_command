@@ -1,5 +1,5 @@
 git stash       (current data is temperrary mode saved)
-git stash list
+git stash list   (show pause data in list)
 git stash apply (pause data started)
 
 git stash pop   (after using in list remove )
