@@ -1,3 +1,9 @@
+git stash 
+git stash list
+git stash apply (pause data started)
+
+git stash pop   (after using in list remove )
+git stash clear 
 
 
 The basic Git stash command is:
